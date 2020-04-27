@@ -1,5 +1,5 @@
 import React,{Component} from 'react';
-import Aux from '../hoc/Aux';
+import Aux from '../hoc/Aux/Aux'
 import Burger from '../components/Burger/Burger';
 import BuildControls from '../components/Burger/BuildControls/BuildControls';
 import Modal from '../components/UI/Modal/Modal';
@@ -109,6 +109,7 @@ class BurgerBuilder extends Component{
   // { 'salad':true,'bacon':false...}
     return(
       <Aux>
+        {/* The wrapping component decides the update of the wrapped component */}
         <Modal show={this.state.purchasing} modalCLosed={this.purchaseCancelHandler}>
           <OrderSummary 
           ingridients={this.state.ingredients} 
