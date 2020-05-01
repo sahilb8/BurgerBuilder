@@ -7,7 +7,7 @@ class Modal extends Component{
 
   //modal and ordersummary will update only when ORDER NOW button is clicked.
   shouldComponentUpdate(nextProps, nextState) {
-    return nextProps.show !== this.props.show;
+    return nextProps.show !== this.props.show || this.props.children !== nextProps.children;
   }
 
 
